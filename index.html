@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function x (array, index, value) {
+    
+            const collectionResult = [];
+           
+
+            for (let i = 0; i < array.length; i++) {
+                
+                if (i == index){
+                    collectionResult[collectionResult.length] = value;
+
+                    for (let j = 1; j < array.length; j++){
+
+                        collectionResult[collectionResult.length] = array[j];
+
+                    }
+
+                    break;
+
+                }
+
+                collectionResult[collectionResult.length] = array [i];
+            }
+
+            return collectionResult;
+        }
+
+        console.log(x([1,2,3,4], 1, 'hello'));
+
+            
+
+
+
+
+
+
+    function indexOf(element){
+        const collection = ['ivan', 'olga', 'petr', 'oleg', 'serj'];
+
+        for (let i = 0; i < collection.length; i++) {
+                if (collection[i] === element) {
+                    index = i;
+                    return "index:" + i + " element:"+ element;
+                }
+                
+            }
+            return -1;
+    }
+
+    console.log(indexOf('serj'));
+
+
+
+    function LastindexOf(element){
+
+        const collection = ['ivan', 'olga', 'petr', 'oleg', 'serj','ivan'];
+
+        for (let i = collection.length - 1; i >=0; i-=1) {
+                if (collection[i] === element) {
+                    index = i;
+                    return i + " "+ element;
+                }
+                
+            }
+            return -1;
+    }
+    console.log(LastindexOf('ivan'));
+
+
+
+    function includes(element){
+        const collection = ['ivan', 'olga', 'petr', 'oleg', 'serj','ivan'];
+
+        for (let i = 0; i < collection.length; i++) {
+                if (collection[i] === element) {
+                    index = i;
+                    return true;
+                }
+                
+            }
+            return false;
+    }
+
+    console.log(includes('olga'));
+
+    </script>
+</body>
+</html>
